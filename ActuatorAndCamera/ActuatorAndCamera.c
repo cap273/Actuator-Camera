@@ -4,14 +4,27 @@
  * Created: 4/7/2014 6:04:37 PM
  *  Author: Carlos Patiño
  *
- * The code below outputs a user-defined duty-cycle from Pin 3 of the Arduino Uno.
+ * This code produces an PWM output signal from Pin 3 of the Arduino Uno.
+ * The PWM duty-cycle is first set at a user-defined maximum value, and is progressively decreased
+ * up to a user-defined minimum value. The speed at which this ramp-down occurs can be adjusted.
+ *
+ * Once the duty-cycle ramp-down is completed, this code will produce a single square wave pulse
+ * from Pin 7, which provides a trigger signal to a camera. The camera is triggered on detection
+ * of the falling edge of a square wave pulse (also called a TTL signal).
+ *
  * Unless specified otherwise, duty-cycle is always expressed as a percentage and not as a fraction.
  *
- * Note that this linear solenoid is an intermittent-duty model with a maximum "on" time of 1 minute.
- * Nominal duty cycle is 25%, presumably meaning that for every minute that the solenoid is fully "on",
- * it must be 3 minutes fully "off". However, if the "on" and "off" cycle is fast enough (currently
- * set at ~1000 Hz) and the total time interval through which the solenoid is being powered is not 
- * excessive, duty cycles up to 100% can be safely applied to the solenoid.
+ * List of user-defined inputs:
+ *		MAX_DUTYCYCLE
+ *		MIN_DUTYCYCLE
+ *		NUM_DUTYCYCLES
+ *		DELAY
+ *
+ * Note that the linear solenoid being driven is an intermittent-duty model with a maximum "on" time of 
+ * 1 minute. Nominal duty cycle is 25%, presumably meaning that for every minute that the solenoid is 
+ * fully "on", it must be 3 minutes fully "off". However, if the "on" and "off" cycle is fast enough 
+ * (currently set at ~1000 Hz) and the total time interval through which the solenoid is being powered 
+ * is not excessive, duty cycles up to 100% can be safely applied to the solenoid.
  */ 
 
 #define F_CPU ((unsigned long) 16000000) // Define CPU frequency as 16MHz.
