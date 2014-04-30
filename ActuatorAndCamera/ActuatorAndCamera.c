@@ -14,6 +14,8 @@
  * excessive, duty cycles up to 100% can be safely applied to the solenoid.
  */ 
 
+// Testing Git commit
+
 #define F_CPU ((unsigned long) 16000000) // Define CPU frequency as 16MHz.
 #include <avr/io.h> // Include basic AVR input/output functions.
 #include <avr/interrupt.h> // Include package for interrupts
