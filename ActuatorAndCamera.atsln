@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ActuatorAndCamera", "ActuatorAndCamera\ActuatorAndCamera.cproj", "{EA16FB01-CCDF-4544-9DA1-61FC770AC379}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA16FB01-CCDF-4544-9DA1-61FC770AC379}.Debug|AVR.ActiveCfg = Debug|AVR
+		{EA16FB01-CCDF-4544-9DA1-61FC770AC379}.Debug|AVR.Build.0 = Debug|AVR
+		{EA16FB01-CCDF-4544-9DA1-61FC770AC379}.Release|AVR.ActiveCfg = Release|AVR
+		{EA16FB01-CCDF-4544-9DA1-61FC770AC379}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
