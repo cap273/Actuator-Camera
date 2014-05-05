@@ -38,22 +38,15 @@
 #include <assert.h> // Include assert() function to catch user-defined input errors.
 
 // Define maximum and minimum duty cycles to be applied. Must be an integer.
-#define MAX_DUTYCYCLE 65
-#define MIN_DUTYCYCLE 15
-/* Combinations that work:
-60-30, 63-27, 63-25, 63-24, 
-	Combinations that sometimes work:
-64-25	
-	Combinations that do NOT work:
-65-25 
-*/
+#define MAX_DUTYCYCLE 63
+#define MIN_DUTYCYCLE 25
 
 /* Define number of distinct duty cycles to be applied. The duty cycle will be decreased progressively
 from MAX_DUTYCYCLE to MIN_DUTYCYCLE this many steps. Must be declared as an integer. 
 NUM_DUTYCYCLES >= 2 */
-#define NUM_DUTYCYCLES 300
+#define NUM_DUTYCYCLES 200
 
-/* Define, in milliseconds (ms), how delay each successive decrease of the Pin 3 output duty cycle.
+/* Define, in milliseconds (ms), how much to delay each successive decrease of the Pin 3 output duty cycle.
 A higher value indicates a greater delay in between each duty cycle decrease, and thus a longer time
 to reach MIN_DUTYCYCLE. */
 #define DELAY 5
@@ -125,8 +118,8 @@ int main(void)
 				_delay_ms(DELAY);
 				
 				/* Printing statements for testing purposes. */
-				printf("The current duty cycle is %d\n", (int) dutyCycleArray[j]/100);
-				_delay_ms(15);
+				// printf("The current duty cycle is %d\n", (int) dutyCycleArray[j]/100);
+				// _delay_ms(15);
 				//printf("The current output register value is %d\n", OCR2B);
 				//_delay_ms(15);
 			}
@@ -140,8 +133,8 @@ int main(void)
 		}
 		
 		/* Printing statement for testing purposes. */
-		printf("The current output register value is %d\n", OCR2B);
-		_delay_ms(1000);
+		// printf("The current output register value is %d\n", OCR2B);
+		// _delay_ms(1000);
 
     }
 }
